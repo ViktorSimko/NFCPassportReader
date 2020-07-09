@@ -320,7 +320,7 @@ class OpenSSLUtils {
         defer { ECDSA_SIG_free(ecsig) }
         var sigData = signature
         BN_bin2bn(&sigData, 32, ecsig?.pointee.r)
-        BN_bin2bn(&sigData + 32, 32, ecsig?.pointee.s)
+        BN_bin2bn(&sigData[32], 32, ecsig?.pointee.s)
         
         let sigSize = i2d_ECDSA_SIG(ecsig, nil)
         var derBytes = [UInt8](repeating: 0, count: Int(sigSize))

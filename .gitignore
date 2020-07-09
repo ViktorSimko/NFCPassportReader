@@ -87,3 +87,7 @@ fastlane/test_output
 # https://github.com/johnno1962/injectionforxcode
 
 iOSInjectionProject/
+masterList.pem
+scripts/icao*
+Example/Pods
+Carthage/

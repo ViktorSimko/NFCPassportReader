@@ -85,7 +85,8 @@ def extractCertsFromMasterlist( masterList ):
     (signedData, err) = execute( cmd, masterList )
     if err.decode("utf8").strip() != "Verification successful":
         print( f"[{err.decode('utf8')}]" )
-        raise Exception( "Verification of Masterlist data failed" )
+        return
+        #raise Exception( "Verification of Masterlist data failed" )
 
     print( "MasterList Verification successful" )
 
