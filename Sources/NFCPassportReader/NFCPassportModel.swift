@@ -25,6 +25,8 @@ public class NFCPassportModel {
     public private(set) lazy var issuingAuthority : String = { return passportDataElements?["5F28"] ?? "?" }()
     public private(set) lazy var documentExpiryDate : String = { return passportDataElements?["59"] ?? "?" }()
     public private(set) lazy var dateOfBirth : String = { return passportDataElements?["5F57"] ?? "?" }()
+    public private(set) lazy var placeOfBirth : String = { return otherDataElements?.placeOfBirth ?? "?" }()
+    public private(set) lazy var otherNames : String = { return otherDataElements?.otherNames ?? "?" }()
     public private(set) lazy var gender : String = { return passportDataElements?["5F35"] ?? "?" }()
     public private(set) lazy var nationality : String = { return passportDataElements?["5F2C"] ?? "?" }()
 
@@ -103,6 +105,12 @@ public class NFCPassportModel {
         guard let dg1 = dataGroupsRead[.DG1] as? DataGroup1 else { return nil }
         
         return dg1.elements
+    }
+
+    private var otherDataElements : DataGroup11? {
+        guard let dg11 = dataGroupsRead[.DG11] as? DataGroup11 else { return nil }
+
+        return dg11
     }
         
     

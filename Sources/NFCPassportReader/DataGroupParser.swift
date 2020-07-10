@@ -479,6 +479,7 @@ public class DataGroup11 : DataGroup {
     public private(set) var proofOfCitizenship : String?
     public private(set) var tdNumbers : String?
     public private(set) var custodyInfo : String?
+    public private(set) var otherNames : String?
 
     required init( _ data : [UInt8] ) throws {
         try super.init(data)
@@ -519,6 +520,8 @@ public class DataGroup11 : DataGroup {
                 tdNumbers = val
             } else if tag == 0x5F18 {
                 custodyInfo = val
+            } else if tag == 0xA0 || tag == 0x02 || tag == 0x5F0F && otherNames == nil {
+                otherNames = val
             }
         } while pos < data.count
     }
