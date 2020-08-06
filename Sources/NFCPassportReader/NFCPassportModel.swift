@@ -15,8 +15,17 @@ public struct DataGroupHash {
     public var match : Bool
 }
 
+public protocol NFCIDCardData {
+    var firstName: String { get }
+    var lastName: String { get }
+    var documentNumber: String { get }
+    var dateOfBirth: String { get }
+    var placeOfBirth: String { get }
+    var nationality: String { get }
+}
+
 @available(iOS 13, *)
-public class NFCPassportModel {
+public class NFCPassportModel: NFCIDCardData {
     
     public private(set) lazy var documentType : String = { return String( passportDataElements?["5F03"]?.first ?? "?" ) }()
     public private(set) lazy var documentSubType : String = { return String( passportDataElements?["5F03"]?.last ?? "?" ) }()
