@@ -46,7 +46,7 @@ extension NFCViewDisplayMessage {
                 return "Sorry, there was a problem reading the passport. Please try again"
             }
         case .successfulRead:
-            return "Passport read successfully"
+            return "Document read successfully"
         }
     }
 
