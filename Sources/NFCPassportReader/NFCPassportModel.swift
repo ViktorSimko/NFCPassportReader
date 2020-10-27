@@ -22,6 +22,7 @@ public protocol NFCIDCardData {
     var dateOfBirth: String { get }
     var placeOfBirth: String { get }
     var nationality: String { get }
+    var passportImage: UIImage? { get }
 }
 
 @available(iOS 13, *)
