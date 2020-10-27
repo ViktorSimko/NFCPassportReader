@@ -90,12 +90,12 @@
 		28A5359924B76F5D0041029E /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				28A5359A24B76F5D0041029E /* NFCPassportReader */,
+				28A5359A24B76F5D0041029E /* NFCRMTDReader */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
 		};
-		28A5359A24B76F5D0041029E /* NFCPassportReader */ = {
+		28A5359A24B76F5D0041029E /* NFCRMTDReader */ = {
 			isa = PBXGroup;
 			children = (
 				28A5359B24B76F5D0041029E /* PassiveAuthentication.swift */,
@@ -111,7 +111,7 @@
 				28A535A624B76F5D0041029E /* BACHandler.swift */,
 				28A535A824B76F5D0041029E /* SecureMessaging.swift */,
 			);
-			path = NFCPassportReader;
+			path = NFCRMTDReader;
 			sourceTree = "<group>";
 		};
 		28A535BA24B77CC40041029E /* Frameworks */ = {
