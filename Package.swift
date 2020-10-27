@@ -7,17 +7,17 @@ let dependencies: [PackageDescription.Package.Dependency] = [
 ]
 
 let libraryTarget = PackageDescription.Target.target(
-  name: "NFCRMTDReader",
+  name: "NFCMRTDReader",
   dependencies: ["OpenSSL"]
 )
 
 let package = Package(
-  name: "NFCRMTDReader",
-  platforms: [.iOS(.v11), .macOS(.v10_13)],
+  name: "NFCMRTDReader",
+  platforms: [.iOS(.v11)],
   products: [
     .library(
-      name: "NFCRMTDReader",
-      targets: ["NFCRMTDReader"]),
+      name: "NFCMRTDReader",
+      targets: ["NFCMRTDReader"]),
   ],
   dependencies: dependencies,
   targets: [libraryTarget]
