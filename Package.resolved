@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "OpenSSL",
+        "repositoryURL": "https://github.com/ViktorSimko/OpenSSL",
+        "state": {
+          "branch": "master",
+          "revision": "3e7e2b6f975ed986649a9366ce35dfe185e10d32",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
